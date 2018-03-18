@@ -1,0 +1,110 @@
+// out: style.css, sourcemap: true, compress: true
+
+@light-boder-color:#ddd;
+@dark-boder-color:#888;
+
+.cp-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+.cp-table, .cp-table thead th {
+   border: 1px solid @dark-boder-color;
+}
+
+.cp-table td, .cp-table th {
+    padding: 10px;
+}
+
+.cp-table {
+
+    position: relative;
+
+    & .cp-crit {
+        font-weight:bold;
+        position: relative;
+    }
+
+    & .cp-weight, .cp-score {
+        text-align: right;
+        width: 50px;
+
+    }
+
+    & .cp-descr {
+        font-size: 0.9em;
+        border-left: 1px solid @dark-boder-color;
+    }
+
+    & .cp-lbl-score {
+        border-left: 1px solid @dark-boder-color;
+    }
+
+    & tbody {
+        & tr:nth-child(4n + 1), tr:nth-child(4n + 2) {
+            background-color: #eee;
+        }
+        & tr:nth-child(4n + 3), tr:nth-child(4n + 4) {
+            background-color: #fff;
+        }
+    }
+
+    & .cp-menu {
+        position:absolute;
+        right:10px;
+        top:5px;
+        padding: 5px;
+        background-color: #ededed;
+        & span:first-child {
+            margin-left: 0;
+        }
+
+        & span {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.cp-table thead {
+    & th:first-child {
+        width: 20%;
+    }
+
+    & th {
+        position:relative;
+    }
+}
+
+.cp-table tbody {
+    position:relative;
+    & th {
+        text-align: right;
+        font-weight: normal;
+    }
+
+    & tr {
+        position:relative;
+    }
+}
+
+.cp-table tfoot {
+    & td {
+        text-align: right;
+        border-top: 1px solid @dark-boder-color;
+    }
+
+    & td {
+        border-left: 1px solid @dark-boder-color;
+    }
+
+    & .cp-total {
+        width: 50px;
+        border-left: 0px;
+    }
+
+    & .cp-best {
+        background-color: #D9FCD4;
+    }
+}
