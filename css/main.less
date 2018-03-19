@@ -1,20 +1,36 @@
 // out: style.css, sourcemap: true, compress: true
 
-@light-boder-color:#ddd;
-@dark-boder-color:#888;
+@light-border-color:#ddd;
+@dark-border-color:#888;
 
-.cp-table {
-    border-collapse: collapse;
-    width: 100%;
-}
+.cp-container {
+    overflow: auto;
+    //width:100%;
 
+    & table {
+        width:100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border: 1px solid @dark-border-color;
+    }
 
-.cp-table, .cp-table thead th {
-   border: 1px solid @dark-boder-color;
-}
+    & table thead th, table tbody td, table tfoot td {
+        width:300px;
+    }
 
-.cp-table td, .cp-table th {
-    padding: 10px;
+    & table thead th {
+        border: 1px solid @dark-border-color;
+    }
+
+    &  table td, table th {
+        padding: 10px;
+        background-clip: padding-box;
+    }
+
+    & .cp-best {
+        background-color: #D9FCD4;
+    }
+
 }
 
 .cp-table {
@@ -24,30 +40,33 @@
     & .cp-crit {
         font-weight:bold;
         position: relative;
+        background-clip: padding-box;
     }
 
     & .cp-weight, .cp-score {
         text-align: right;
         width: 50px;
-
     }
 
     & .cp-descr {
         font-size: 0.9em;
-        border-left: 1px solid @dark-boder-color;
+        border-left: 1px solid @dark-border-color;
     }
 
     & .cp-lbl-score {
-        border-left: 1px solid @dark-boder-color;
+        border-left: 1px solid @dark-border-color;
     }
 
     & tbody {
-        & tr:nth-child(4n + 1), tr:nth-child(4n + 2) {
+        & tr:nth-child(4n + 1) td, tr:nth-child(4n + 2) td, tr:nth-child(4n + 1) th, tr:nth-child(4n + 2) th {
             background-color: #eee;
+            background-clip: padding-box;
         }
-        & tr:nth-child(4n + 3), tr:nth-child(4n + 4) {
-            background-color: #fff;
+        & tr:nth-child(4n + 3) td, tr:nth-child(4n + 4) td, tr:nth-child(4n + 3) th, tr:nth-child(4n + 4) th {
+            background: #fff;
+            background-clip: padding-box;
         }
+
     }
 
     & .cp-menu {
@@ -55,7 +74,9 @@
         right:10px;
         top:5px;
         padding: 5px;
-        background-color: #ededed;
+        background-color: #fff;
+        border:1px solid @light-border-color;
+        box-shadow: 0px 0px 2px 2px #eee;
         & span:first-child {
             margin-left: 0;
         }
@@ -69,7 +90,6 @@
 
 .cp-table thead {
     & th:first-child {
-        width: 20%;
     }
 
     & th {
@@ -78,7 +98,6 @@
 }
 
 .cp-table tbody {
-    position:relative;
     & th {
         text-align: right;
         font-weight: normal;
@@ -92,11 +111,8 @@
 .cp-table tfoot {
     & td {
         text-align: right;
-        border-top: 1px solid @dark-boder-color;
-    }
-
-    & td {
-        border-left: 1px solid @dark-boder-color;
+        border-top: 1px solid @dark-border-color;
+        border-left: 1px solid @dark-border-color;
     }
 
     & .cp-total {
@@ -104,7 +120,18 @@
         border-left: 0px;
     }
 
-    & .cp-best {
-        background-color: #D9FCD4;
+}
+
+.cp-tbl-total {
+    & th, td {
+        border: 1px solid @dark-border-color;
+    }
+
+    & tbody th {
+        text-align: left;
+    }
+
+    & td {
+        text-align: center;
     }
 }

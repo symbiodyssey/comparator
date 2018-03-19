@@ -9,7 +9,8 @@
   </head>
   <body>
     <h1>Comparator</h1>
-    <div id="comparator">
+    <div id="comparator" class="cp-container">
+    <h2>Table 1</h2>
     <table id="cp-tbl1" class="cp-table" contenteditable="true">
     <thead>
     <tr><th colspan="2">Criteria</th><th colspan="2">Application 1</th></tr>
@@ -24,8 +25,54 @@
     
     </tbody>
     <tfoot>
-    <tr><td colspan="2">&nbsp;</td><td>Total :</td><td class="cp-total"></td></tr>
+    <tr><td colspan="2">&nbsp;</td><td class="cp-lbl-total">Total :</td><td class="cp-total"></td></tr>
     </tfoot>
+    </table>
+    <h2>Table 2</h2>
+    <table id="cp-tbl2" class="cp-table" contenteditable="true">
+    <thead>
+    <tr><th colspan="2">Criteria</th><th colspan="2">Application 1</th></tr>
+    </thead>
+    <tbody>
+    
+    <tr><td colspan="2" class="cp-crit">Design</td><td colspan="2" class="cp-descr">The design is really beautiful</td></tr>
+    <tr><th class="cp-lbl-weight">Weight :</th><td class="cp-weight">5</td><th class="cp-lbl-score">Score :</th><td class="cp-score">80</td></tr>
+    
+    <tr><td colspan="2" class="cp-crit">User friendly</td><td colspan="2" class="cp-descr">Buttons have no labels</td></tr>
+    <tr><th class="cp-lbl-weight">Weight :</th><td class="cp-weight">4</td><th class="cp-lbl-score">Score :</th><td class="cp-score">70</td></tr>
+    
+    </tbody>
+    <tfoot>
+    <tr><td colspan="2">&nbsp;</td><td class="cp-lbl-total">Total :</td><td class="cp-total"></td></tr>
+    </tfoot>
+    </table>
+    <h2>Table 3</h2>
+    <table id="cp-tbl3" class="cp-table" contenteditable="true">
+    <thead>
+    <tr><th colspan="2">Criteria</th><th colspan="2">Application 1</th></tr>
+    </thead>
+    <tbody>
+    
+    <tr><td colspan="2" class="cp-crit">Design</td><td colspan="2" class="cp-descr">The design is really beautiful</td></tr>
+    <tr><th class="cp-lbl-weight">Weight :</th><td class="cp-weight">5</td><th class="cp-lbl-score">Score :</th><td class="cp-score">80</td></tr>
+    
+    <tr><td colspan="2" class="cp-crit">User friendly</td><td colspan="2" class="cp-descr">Buttons have no labels</td></tr>
+    <tr><th class="cp-lbl-weight">Weight :</th><td class="cp-weight">4</td><th class="cp-lbl-score">Score :</th><td class="cp-score">70</td></tr>
+    
+    </tbody>
+    <tfoot>
+    <tr><td colspan="2">&nbsp;</td><td class="cp-lbl-total">Total :</td><td class="cp-total"></td></tr>
+    </tfoot>
+    </table>
+    
+    <h2>Great total</h2>
+    <table id="cp-tbl4" class="cp-tbl-total" contenteditable="true">
+    <thead>
+    <tr><th>&nbsp;</th><th>Application 1</th></tr>
+    </thead>
+    <tbody>
+    <tr><th>Total</th><td class="cp-great-total"></td></tr>
+    </tbody>
     </table>
     </div>
     <div><button id="showHTML">Show source</button></div>
